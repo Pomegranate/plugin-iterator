@@ -1,0 +1,33 @@
+{
+  "name": "@pomegranate/plugin-iterator",
+  "version": "0.0.0",
+  "description": "The internal plugin state iterator for the Pomegranate framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test FORCE_COLOR=1 tap -R spec --cov test/unit/**/*.js test/integration/**/*.js",
+    "test:report": "NODE_ENV=test FORCE_COLOR=1 tap -R spec --cov --coverage-report=lcov test/unit/*.js test/integration/**/*.js",
+    "test:file": "NODE_ENV=test FORCE_COLOR=1 tap -R spec"
+  },
+  "keywords": [
+    "Pomegranate",
+    "Pomegranate-structrual"
+  ],
+  "author": "Jim Bulkowski <jim.b@paperelectron.com> (http://paperelectron.com)",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "lib/",
+    "docs/"
+  ],
+  "dependencies": {
+    "@pomegranate/toposorter": "^1.0.0",
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@pomegranate/framework-utils": "0.2",
+    "@pomegranate/plugin-facade": "^1.0.3",
+    "@pomegranate/test-utils": "^0.3.0",
+    "tap": "^11.0.0"
+  }
+}

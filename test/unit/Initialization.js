@@ -58,12 +58,12 @@ tap.test('Initializing plugins', (t) => {
   IteratorFactory.then((PluginIterator) => {
     t.test('Initialization', (t) => {
       PluginIterator.initialize()
-        .then((initplugins) => {
-          t.equal(plugins.length, initplugins.length, 'Initialized correct number of plugins.')
+        .then((initializeResult) => {
+          t.equal(plugins.length, initializeResult.processed, 'Initialized correct number of plugins.')
 
           t.ok(_fp.every((p) => {
             return p.state.initialized
-          }, initplugins), 'All Plugins have been initialized.')
+          }, PluginIterator.getPlugins()), 'All Plugins have been initialized.')
 
           t.done()
         })
@@ -71,12 +71,12 @@ tap.test('Initializing plugins', (t) => {
 
     t.test('Configuration', (t) => {
       PluginIterator.configure()
-        .then((configuredPlugins) => {
-          t.equal(plugins.length, configuredPlugins.length, 'Initialized correct number of plugins.')
+        .then((configureResult) => {
+          t.equal(plugins.length, configureResult.processed, 'Initialized correct number of plugins.')
 
           t.ok(_fp.every((p) => {
             return p.state.configured
-          }, configuredPlugins), 'All Plugins have been configured.')
+          }, PluginIterator.getPlugins()), 'All Plugins have been configured.')
 
           t.done()
         })

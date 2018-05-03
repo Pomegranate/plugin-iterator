@@ -40,12 +40,12 @@ tap.test('Error Behavior', (t) => {
   IteratorFactory.then((PluginIterator) => {
     t.test('Initialization', (t) => {
       PluginIterator.initialize()
-        .then((initplugins) => {
-          t.equal(plugins.length, initplugins.length, 'Initialized correct number of plugins.')
+        .then((initResult) => {
+          t.equal(plugins.length, initResult.processed, 'Initialized correct number of plugins.')
 
           t.ok(_fp.every((p) => {
             return p.state.initialized
-          }, initplugins), 'All Plugins have been initialized.')
+          }, PluginIterator.getPlugins()), 'All Plugins have been initialized.')
 
           t.done()
         })

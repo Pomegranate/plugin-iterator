@@ -20,15 +20,11 @@
     "docs/"
   ],
   "dependencies": {
-    "@pomegranate/toposorter": "^1.0.0",
     "bluebird": "^3.5.1",
     "debug": "^3.1.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "@pomegranate/framework-utils": "0.2",
-    "@pomegranate/plugin-facade": "^1.0.3",
-    "@pomegranate/test-utils": "^0.3.0",
     "tap": "^11.0.0"
   }
 }

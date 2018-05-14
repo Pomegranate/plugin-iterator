@@ -1,6 +1,6 @@
 {
   "name": "@pomegranate/plugin-iterator",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "The internal plugin state iterator for the Pomegranate framework.",
   "main": "index.js",
   "scripts": {
